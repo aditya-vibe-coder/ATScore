@@ -1,0 +1,50 @@
+<svg width="1200" height="400" viewBox="0 0 1200 400" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background Gradient -->
+  <rect width="1200" height="400" rx="20" fill="url(#paint0_linear)" />
+  
+  <!-- Abstract Tech Shapes -->
+  <circle cx="1100" cy="100" r="150" fill="url(#paint1_radial)" fill-opacity="0.3" />
+  <circle cx="100" cy="300" r="100" fill="url(#paint2_radial)" fill-opacity="0.2" />
+  
+  <!-- Decorative Grid Lines -->
+  <path d="M0 100H1200" stroke="#1e293b" stroke-width="1" />
+  <path d="M0 200H1200" stroke="#1e293b" stroke-width="1" />
+  <path d="M0 300H1200" stroke="#1e293b" stroke-width="1" />
+  <path d="M200 0V400" stroke="#1e293b" stroke-width="1" />
+  <path d="M400 0V400" stroke="#1e293b" stroke-width="1" />
+  <path d="M600 0V400" stroke="#1e293b" stroke-width="1" />
+  <path d="M800 0V400" stroke="#1e293b" stroke-width="1" />
+  <path d="M1000 0V400" stroke="#1e293b" stroke-width="1" />
+
+  <!-- Main Text -->
+  <text x="50%" y="45%" dominant-baseline="middle" text-anchor="middle" fill="white" style="font-family: 'Inter', sans-serif; font-weight: 900; font-size: 84px; letter-spacing: -2px;">ATScore <tspan fill="#f97316">INDIA</tspan></text>
+  
+  <!-- Tagline -->
+  <text x="50%" y="62%" dominant-baseline="middle" text-anchor="middle" fill="#94a3b8" style="font-family: 'Inter', sans-serif; font-weight: 500; font-size: 28px; letter-spacing: 1px;">The Resume Scorer Calibrated for the Indian Job Market</text>
+  
+  <!-- Feature Badges -->
+  <rect x="440" y="75%" width="120" height="40" rx="20" fill="#f97316" fill-opacity="0.2" stroke="#f97316" stroke-width="2" />
+  <text x="500" y="82%" dominant-baseline="middle" text-anchor="middle" fill="#fb923c" style="font-family: 'Inter', sans-serif; font-weight: 700; font-size: 14px;">ATS CALIBRATED</text>
+  
+  <rect x="580" y="75%" width="140" height="40" rx="20" fill="#6366f1" fill-opacity="0.2" stroke="#6366f1" stroke-width="2" />
+  <text x="650" y="82%" dominant-baseline="middle" text-anchor="middle" fill="#a5b4fc" style="font-family: 'Inter', sans-serif; font-weight: 700; font-size: 14px;">AI-POWERED FEEDBACK</text>
+  
+  <rect x="740" y="75%" width="120" height="40" rx="20" fill="#10b981" fill-opacity="0.2" stroke="#10b981" stroke-width="2" />
+  <text x="800" y="82%" dominant-baseline="middle" text-anchor="middle" fill="#6ee7b7" style="font-family: 'Inter', sans-serif; font-weight: 700; font-size: 14px;">INDIA INTELLIGENCE</text>
+
+  <!-- Definitions -->
+  <defs>
+    <linearGradient id="paint0_linear" x1="0" y1="0" x2="1200" y2="400" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#0f172a" />
+      <stop offset="1" stop-color="#1e293b" />
+    </linearGradient>
+    <radialGradient id="paint1_radial" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(1100 100) rotate(90deg) scale(150)">
+      <stop stop-color="#f97316" />
+      <stop offset="1" stop-color="#f97316" stop-opacity="0" />
+    </radialGradient>
+    <radialGradient id="paint2_radial" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(100 300) rotate(90deg) scale(100)">
+      <stop stop-color="#6366f1" />
+      <stop offset="1" stop-color="#6366f1" stop-opacity="0" />
+    </radialGradient>
+  </defs>
+</svg>

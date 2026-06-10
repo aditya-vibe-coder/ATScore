@@ -1,0 +1,16 @@
+User-agent: *
+Allow: /
+Allow: /public/
+Disallow: /dashboard
+Disallow: /upload
+Disallow: /analysis
+Disallow: /settings
+Disallow: /profile
+Disallow: /history
+Disallow: /premium
+Disallow: /naukri
+Disallow: /auth
+Disallow: /login
+Disallow: /signup
+
+Sitemap: https://atscore.harmnix.com/sitemap.xml

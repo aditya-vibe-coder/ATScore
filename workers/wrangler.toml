@@ -1,0 +1,22 @@
+name = "api-atscore-india"
+main = "src/index.ts"
+compatibility_date = "2025-04-01"
+compatibility_flags = ["nodejs_compat"]
+
+# Custom domain for the worker
+routes = [
+  { pattern = "api.YOUR_DOMAIN.com", custom_domain = true }
+]
+
+# KV namespaces for persistent storage
+[[kv_namespaces]]
+binding = "KV_DATA"
+id = "YOUR_KV_NAMESPACE_ID"
+preview_id = "YOUR_KV_PREVIEW_ID"
+
+# Environment variables — set via `wrangler secret put` in production
+# All secrets are loaded from env bindings, not hardcoded here
+[vars]
+NODE_ENV = "production"
+GEMINI_API_KEY = ""
+ALLOWED_ORIGIN = "https://YOUR_DOMAIN.com"

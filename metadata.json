@@ -1,0 +1,6 @@
+{
+  "name": "ATScore India",
+  "description": "Premium ATS resume scorer calibrated for the Indian job market, supporting Naukri.com, TCS/mass hiring, FAANG India, and startups.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

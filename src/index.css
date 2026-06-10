@@ -1,0 +1,160 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:ital,wght@0,300;0,400;0,500;0,600;1,400&family=JetBrains+Mono:wght@400;500&display=swap');
+@import "tailwindcss";
+
+:root {
+  --brand-bg: #020617;
+  --brand-surface: #0f172a;
+  --brand-elevated: #1e293b;
+  --brand-border: #1e293b;
+  --brand-text: #f1f5f9;
+  --brand-text-muted: #94a3b8;
+}
+
+:root[data-theme="light"] {
+  --brand-bg: #f8fafc;
+  --brand-surface: #ffffff;
+  --brand-elevated: #f1f5f9;
+  --brand-border: #e2e8f0;
+  --brand-text: #0f172a;
+  --brand-text-muted: #475569;
+}
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Space Grotesk", sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, monospace;
+  
+  --color-brand-bg: var(--brand-bg);
+  --color-brand-surface: var(--brand-surface);
+  --color-brand-elevated: var(--brand-elevated);
+  --color-brand-border: var(--brand-border);
+  
+  --color-accent-primary: #6366f1;
+  --color-accent-green: #10b981;
+  --color-accent-red: #f43f5e;
+  --color-accent-yellow: #f59e0b;
+  --color-accent-blue: #3b82f6;
+  
+  --color-score-a: #10b981;
+  --color-score-b: #3b82f6;
+  --color-score-c: #f59e0b;
+  --color-score-d: #f97316;
+  --color-score-f: #f43f5e;
+  
+  --shadow-bento: 0 4px 20px -2px rgba(0, 0, 0, 0.3), 0 2px 8px -1px rgba(0, 0, 0, 0.2);
+}
+
+@layer base {
+  body {
+    background-color: var(--color-brand-bg);
+    color: var(--brand-text);
+    font-family: var(--font-sans);
+    background-image: radial-gradient(circle at 10% 20%, rgba(99, 102, 241, 0.03) 0%, transparent 40%),
+                      radial-gradient(circle at 90% 80%, rgba(99, 102, 241, 0.02) 0%, transparent 50%);
+  }
+
+  /* Handle dynamic light mode text overrides to prevent white text on light background issues */
+  :root[data-theme="light"] h1,
+  :root[data-theme="light"] h2,
+  :root[data-theme="light"] h3,
+  :root[data-theme="light"] h4,
+  :root[data-theme="light"] h5,
+  :root[data-theme="light"] h6 {
+    color: var(--brand-text) !important;
+  }
+
+  :root[data-theme="light"] p.text-white,
+  :root[data-theme="light"] span.text-white,
+  :root[data-theme="light"] div.text-white,
+  :root[data-theme="light"] label.text-white {
+    color: var(--brand-text) !important;
+  }
+
+  /* Exceptions: Buttons and Badges inside accent containers should keep white text */
+  :root[data-theme="light"] button.bg-accent-primary,
+  :root[data-theme="light"] button.bg-indigo-600,
+  :root[data-theme="light"] button.bg-emerald-600,
+  :root[data-theme="light"] button.bg-orange-600,
+  :root[data-theme="light"] .bg-accent-primary button,
+  :root[data-theme="light"] .bg-accent-primary span,
+  :root[data-theme="light"] .bg-emerald-600 span,
+  :root[data-theme="light"] .bg-orange-600 span,
+  :root[data-theme="light"] .bg-accent-primary p,
+  :root[data-theme="light"] .bg-indigo-600 span {
+    color: #ffffff !important;
+  }
+
+  :root[data-theme="light"] .text-gray-400,
+  :root[data-theme="light"] .text-gray-500 {
+    color: var(--brand-text-muted) !important;
+  }
+
+  :root[data-theme="light"] .text-gray-300 {
+    color: #334155 !important;
+  }
+
+  :root[data-theme="light"] .text-gray-200 {
+    color: #1e293b !important;
+  }
+
+  /* Inputs, Textareas, and Select fields in Light Mode */
+  :root[data-theme="light"] input,
+  :root[data-theme="light"] textarea,
+  :root[data-theme="light"] select {
+    background-color: var(--brand-bg) !important;
+    color: var(--brand-text) !important;
+    border-color: var(--brand-border) !important;
+  }
+
+  :root[data-theme="light"] input::placeholder,
+  :root[data-theme="light"] textarea::placeholder {
+    color: #64748b !important;
+  }
+
+  :root[data-theme="light"] .bg-brand-surface\/40 {
+    background-color: #f1f5f9 !important;
+  }
+
+  :root[data-theme="light"] .border-brand-border,
+  :root[data-theme="light"] .border-brand-border\/40 {
+    border-color: var(--brand-border) !important;
+  }
+}
+
+/* Force rounded corners inside bento dashboards to support 3xl borders */
+.bento-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+/* Override existing shadow utilities and map rounded edges beautifully to 3xl for the bento look */
+.rounded-2xl {
+  border-radius: 1.5rem !important; /* rounded-3xl alignment */
+}
+.rounded-xl {
+  border-radius: 1rem !important; /* smooth rounded-2xl alignment */
+}
+
+/* Custom scrollbar utility conforming to Bento colors */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: var(--color-brand-bg);
+}
+::-webkit-scrollbar-thumb {
+  background: #334155;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-accent-primary);
+}
+
+/* Card hover glow transitions */
+.hover-glow:hover {
+  border-color: rgba(99, 102, 241, 0.35) !important;
+  box-shadow: 0 10px 30px -10px rgba(99, 102, 241, 0.15);
+}
+
